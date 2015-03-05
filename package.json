@@ -4,7 +4,7 @@
   "description": "get, set and delete values in osx keychain",
   "main": "lib/index.js",
   "scripts": {
-    "test": "alias gulp=./node_modules/gulp/bin/gulp.js;gulp eslint && gulp beautify && ./bin/keychain -h"
+    "test": "gulp eslint && gulp beautify && ./bin/keychain -h"
   },
   "bin": {
     "keychain": "bin/keychain"
