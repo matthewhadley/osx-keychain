@@ -3,12 +3,11 @@
 
 'use strict';
 
-var util = require('util');
 var argv = require('minimist')(process.argv.slice(2));
 var keychain = require('../lib');
 
 var help = function() {
-  util.puts([]
+  console.log([]
     .concat('keychain ' + require('../package.json').version)
     .concat('')
     .concat('usage:')
@@ -30,7 +29,7 @@ var check = function(err) {
 };
 
 if(argv.version || argv.v) {
-  util.puts(require('../package.json').version);
+  console.log(require('../package.json').version);
   process.exit();
 }
 
