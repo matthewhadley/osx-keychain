@@ -1,12 +1,10 @@
 #!/usr/bin/env node
-/*eslint no-process-exit:0 */
-
 'use strict';
 
 var argv = require('minimist')(process.argv.slice(2));
 var keychain = require('../lib');
 
-var help = function() {
+var help = function () {
   console.log([]
     .concat('keychain ' + require('../package.json').version)
     .concat('')
@@ -17,8 +15,8 @@ var help = function() {
     .join('\n'));
 };
 
-var check = function(err) {
-  if(err) {
+var check = function (err) {
+  if (err) {
     console.log('error:', err);
     if (err === 'malformed argument') {
       console.log();
@@ -28,27 +26,27 @@ var check = function(err) {
   }
 };
 
-if(argv.version || argv.v) {
+if (argv.version || argv.v) {
   console.log(require('../package.json').version);
   process.exit();
 }
 
-if(argv.help || argv.h || argv['?'] || (Object.keys(argv).length === 1)){
+if (argv.help || argv.h || argv['?'] || (Object.keys(argv).length === 1)) {
   help();
   process.exit();
 }
 
 if (argv.g) {
-  keychain.get(argv.g, argv._[0] || process.env.USER, function(err, res) {
+  keychain.get(argv.g, argv._[0] || process.env.USER, function (err, res) {
     check(err);
     console.log(res);
   });
 } else if (argv.s) {
-  keychain.set(argv.s, argv._[0], argv._[1] || process.env.USER, function(err, res) {
+  keychain.set(argv.s, argv._[0], argv._[1] || process.env.USER, function (err, res) {
     check(err);
   });
 } else if (argv.d) {
-  keychain.delete(argv.d, argv._[0] || process.env.USER, function(err, res) {
+  keychain.delete(argv.d, argv._[0] || process.env.USER, function (err, res) {
     check(err);
   });
 } else {

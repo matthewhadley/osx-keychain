@@ -4,30 +4,38 @@
   "description": "get, set and delete values in osx keychain",
   "main": "lib/index.js",
   "scripts": {
-    "test": "gulp eslint && gulp beautify && ./bin/keychain -h"
+    "test": "yarn lint",
+    "lint": "eslint \"**/*.js\"",
+    "lint:fix": "eslint \"**/*.js\" --fix"
   },
   "bin": {
     "keychain": "bin/keychain"
   },
   "preferGlobal": true,
-  "author": "Matthew Hadley (https://github.com/diffsky)",
-  "license": "MIT",
+  "author": "Matthew Hadley (https://github.com/matthewhadley)",
+  "license": "UNLICENSED",
   "dependencies": {
-    "minimist": "^1.1.0"
+    "minimist": "^1.2.5"
   },
   "devDependencies": {
-    "gulp": "^3.8.10",
-    "gulp-jsbeautifier": "0.0.4",
-    "gulp-diff": ">=0.3.1",
-    "gulp-eslint": ">=0.2.0"
+    "eslint": "^7.0.0",
+    "eslint-config-semistandard": "^15.0.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/diffsky/osx-keychain.git"
-  },
+  "repository": "git://github.com/matthewhadley/osx-keychain.git",
   "bugs": {
-    "url": "https://github.com/diffsky/osx-keychain/issues"
+    "url": "https://github.com/matthewhadley/osx-keychain/issues"
   },
-  "homepage": "https://github.com/diffsky/osx-keychain"
+  "homepage": "https://github.com/matthewhadley/osx-keychain",
+  "engines": {
+    "node": "12.16.0",
+    "yarn": "1.22.0"
+  },
+  "eslintConfig": {
+    "extends": "semistandard"
+  }
 }
-

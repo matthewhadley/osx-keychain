@@ -1,4 +1,4 @@
-# osx-keychain [![](https://travis-ci.org/diffsky/osx-keychain.svg)](https://travis-ci.org/diffsky/osx-keychain)
+# osx-keychain [![](https://travis-ci.org/matthewhadley/osx-keychain.svg)](https://travis-ci.org/matthewhadley/osx-keychain)
 
 Get, Set and Delete values in the osx keychain.
 
