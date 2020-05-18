@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/matthewhadley/osx-keychain",
   "engines": {
-    "node": "12.16.0",
+    "node": "^12",
     "yarn": "1.22.0"
   },
   "eslintConfig": {
