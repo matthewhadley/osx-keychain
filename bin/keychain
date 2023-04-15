@@ -17,8 +17,8 @@ var help = function () {
 
 var check = function (err) {
   if (err) {
-    console.log('error:', err);
     if (err === 'malformed argument') {
+      console.log('error:', err);
       console.log();
       help();
     }
