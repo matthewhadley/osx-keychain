@@ -15,7 +15,7 @@
   "author": "Matthew Hadley (https://github.com/matthewhadley)",
   "license": "UNLICENSED",
   "dependencies": {
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.8"
   },
   "devDependencies": {
     "eslint": "^7.0.0",
